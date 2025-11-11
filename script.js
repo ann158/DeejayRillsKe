@@ -25,10 +25,18 @@ let currentTestimonial = 0;
 const testimonials = document.querySelectorAll('.testimonial');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
+let testimonialInterval;
 
+// Show testimonial with fade
 function showTestimonial(index) {
   testimonials.forEach((t, i) => {
-    t.classList.toggle('active', i === index);
+    t.style.opacity = 0;
+    t.style.transition = 'opacity 0.5s';
+    t.style.display = 'none';
+    if (i === index) {
+      t.style.display = 'block';
+      setTimeout(() => t.style.opacity = 1, 20);
+    }
   });
 }
 
@@ -42,18 +50,21 @@ function prevTestimonialFunc() {
   showTestimonial(currentTestimonial);
 }
 
+// Initialize
+showTestimonial(currentTestimonial);
+
+// Buttons
 if (nextBtn && prevBtn) {
   nextBtn.addEventListener('click', nextTestimonial);
   prevBtn.addEventListener('click', prevTestimonialFunc);
 }
 
 // Auto slide every 6 seconds
-setInterval(nextTestimonial, 6000);
+testimonialInterval = setInterval(nextTestimonial, 6000);
 
-// ===== Optional: Scroll to Top Button =====
-// (Uncomment below if you add a button with id="toTop")
-// const toTop = document.getElementById('toTop');
-// window.addEventListener('scroll', () => {
-//   toTop.style.display = window.scrollY > 400 ? 'block' : 'none';
-// });
-// toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+// Pause auto-slide on hover
+const slider = document.querySelector('.testimonial-slider');
+if (slider) {
+  slider.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
+  slider.addEventListener('mouseleave', () => testimonialInterval = setInterval(nextTestimonial, 6000));
+}
