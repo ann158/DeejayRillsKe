@@ -20,6 +20,14 @@ const fadeObserver = new IntersectionObserver(entries => {
 
 fadeElements.forEach(el => fadeObserver.observe(el));
 
+// ===== Fade-down for Gega Awards on Load =====
+const gegaSection = document.querySelector('#gega-awards');
+window.addEventListener('load', () => {
+  if (gegaSection) {
+    setTimeout(() => gegaSection.classList.add('visible'), 300); // slight delay for effect
+  }
+});
+
 // ===== Testimonials Slider =====
 let currentTestimonial = 0;
 const testimonials = document.querySelectorAll('.testimonial');
