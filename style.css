@@ -440,6 +440,109 @@ body {
 }
 
 /* =========================
+   EGEKABU THUMBNAILS
+========================= */
+.thumbnail-link {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail-link img {
+  width: 100%;
+  display: block;
+}
+
+.thumbnail-/* =========================
+   EGEKABU THUMBNAILS UPDATED
+========================= */
+.mix-card a {
+  display: block;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mix-card a img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.mix-card a img:hover {
+  transform: scale(1.05);
+}
+
+.mix-card h4 {
+  margin-top: 0.8rem;
+  font-size: 1.1rem;
+  color: #111;
+  text-align: center;
+}
+
+/* Modal for Egekabu videos */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.thumbnail-link {
+  position: relative;
+  display: block;
+}
+
+.thumbnail-link img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.thumbnail-link img:hover {
+  transform: scale(1.05);
+}
+
+.thumbnail-link .play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  pointer-events: none;
+}
+
+/* =========================
    CONTACT
 ========================= */
 .contact-wrap {

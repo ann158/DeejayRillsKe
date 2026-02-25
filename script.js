@@ -1,87 +1,75 @@
-// ===== Smooth Scroll =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (target) target.scrollIntoView({ behavior: 'smooth' });
+// =========================
+// EGEKABU THUMBNAILS (clickable)
+// =========================
+const thumbnails = document.querySelectorAll(".thumbnail-link");
+
+thumbnails.forEach(link => {
+  link.addEventListener("click", e => {
+    e.preventDefault(); // prevent default if using modal before
+    const url = link.getAttribute("href");
+    window.open(url, "_blank"); // open in new tab
   });
 });
 
-// ===== Fade-up on Scroll =====
-const fadeElements = document.querySelectorAll('.fade-up');
-const fadeObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.2 });
+// =========================
+// VIEW MORE / VIEW LESS GALLERY
+// =========================
+const viewMoreBtn = document.getElementById("view-more-btn");
+const hiddenGallery = document.getElementById("hidden-gallery");
 
-fadeElements.forEach(el => fadeObserver.observe(el));
+viewMoreBtn.addEventListener("click", () => {
+  hiddenGallery.classList.toggle("visible");
+  if (hiddenGallery.classList.contains("visible")) {
+    hiddenGallery.style.display = "grid"; // show the hidden gallery
+    viewMoreBtn.textContent = "View Less";
+  } else {
+    hiddenGallery.style.display = "none"; // hide it again
+    viewMoreBtn.textContent = "View More";
+  }
+});
 
-// ===== Testimonials Slider =====
-let currentTestimonial = 0;
-const testimonials = document.querySelectorAll('.testimonial');
-const prevBtn = document.querySelector('.prev');
-const nextBtn = document.querySelector('.next');
-let testimonialInterval;
+// =========================
+// FADE-UP ANIMATION ON SCROLL
+// =========================
+const fadeElems = document.querySelectorAll(".fade-up");
 
-// Show testimonial with fade
-function showTestimonial(index) {
-  testimonials.forEach((t, i) => {
-    t.style.opacity = 0;
-    t.style.transition = 'opacity 0.5s';
-    t.style.display = 'none';
-    if (i === index) {
-      t.style.display = 'block';
-      setTimeout(() => t.style.opacity = 1, 20);
-    }
-  });
-}
-
-function nextTestimonial() {
-  currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-  showTestimonial(currentTestimonial);
-}
-
-function prevTestimonialFunc() {
-  currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-  showTestimonial(currentTestimonial);
-}
-
-// Initialize
-showTestimonial(currentTestimonial);
-
-// Buttons
-if (nextBtn && prevBtn) {
-  nextBtn.addEventListener('click', nextTestimonial);
-  prevBtn.addEventListener('click', prevTestimonialFunc);
-}
-
-// Auto slide every 6 seconds
-testimonialInterval = setInterval(nextTestimonial, 6000);
-
-// Pause auto-slide on hover
-const slider = document.querySelector('.testimonial-slider');
-if (slider) {
-  slider.addEventListener('mouseenter', () => clearInterval(testimonialInterval));
-  slider.addEventListener('mouseleave', () => testimonialInterval = setInterval(nextTestimonial, 6000));
-}
-
-// ===== View More Gallery =====
-const viewMoreBtn = document.querySelector('#view-more-btn');
-const hiddenGallery = document.querySelector('#hidden-gallery');
-
-if(viewMoreBtn && hiddenGallery) {
-  viewMoreBtn.addEventListener('click', () => {
-    hiddenGallery.classList.toggle('visible');
-    if(hiddenGallery.classList.contains('visible')) {
-      hiddenGallery.style.display = 'grid';
-      viewMoreBtn.textContent = 'View Less';
+const fadeOnScroll = () => {
+  const triggerBottom = window.innerHeight * 0.85;
+  fadeElems.forEach(elem => {
+    const top = elem.getBoundingClientRect().top;
+    if (top < triggerBottom) {
+      elem.classList.add("visible");
     } else {
-      hiddenGallery.style.display = 'none';
-      viewMoreBtn.textContent = 'View More';
+      elem.classList.remove("visible");
     }
   });
-}
+};
+
+window.addEventListener("scroll", fadeOnScroll);
+fadeOnScroll(); // trigger on load
+
+// =========================
+// TESTIMONIALS SLIDER
+// =========================
+let testimonialIndex = 0;
+const testimonials = document.querySelectorAll(".testimonial");
+const prevBtn = document.querySelector(".testimonial-nav .prev");
+const nextBtn = document.querySelector(".testimonial-nav .next");
+
+const showTestimonial = index => {
+  testimonials.forEach((t, i) => {
+    t.style.display = i === index ? "block" : "none";
+  });
+};
+
+showTestimonial(testimonialIndex);
+
+prevBtn.addEventListener("click", () => {
+  testimonialIndex = (testimonialIndex - 1 + testimonials.length) % testimonials.length;
+  showTestimonial(testimonialIndex);
+});
+
+nextBtn.addEventListener("click", () => {
+  testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+  showTestimonial(testimonialIndex);
+});

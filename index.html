@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Deejay Rills | Mr. Mambo Mbaaya</title>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
+<!-- TOPBAR -->
 <header class="topbar">
+
 <div class="brand">Deejay Rills</div>
 
 <div class="top-socials">
@@ -19,28 +24,42 @@
 <a href="https://www.facebook.com/Rills Ke" target="_blank"><i class="fa-brands fa-facebook"></i></a>
 <a href="https://www.youtube.com/@Deejayrillske" target="_blank"><i class="fa-brands fa-youtube"></i></a>
 </div>
+
 </header>
 
+
+<!-- HERO -->
 <section id="hero" class="fade-up">
+
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>
 
 <div class="hero-inner">
-<h1>DJ Rills <span class="tagline">Mr. Mambo Mbaaya</span></h1>
+
+<h1>
+DJ Rills
+<span class="tagline">Mr. Mambo Mbaaya</span>
+</h1>
+
 <p class="hero-sub">Feel the Beat. Live the Vibe.</p>
 
 <div class="hero-cta">
 <a href="#egekabu" class="btn btn-gold">Egekabu Series</a>
 <a href="#mixes" class="btn btn-outline">Listen Now</a>
 </div>
+
 </div>
 
 <a class="hero-scroll" href="#about">
 <i class="fa-solid fa-angles-down"></i>
 </a>
+
 </section>
 
+
+<!-- ABOUT -->
 <section id="about" class="container section fade-up">
+
 <div class="about-grid">
 
 <div class="about-photo">
@@ -48,15 +67,12 @@
 </div>
 
 <div class="about-text">
+
 <h2>About Deejay Rills</h2>
 
 <p>
 DJ Rills (Mr. Mambo Mbaaya) blends Kisii, Afro, Amapiano, and club anthems into unforgettable sets.
 He’s played at major festivals and private events across Kenya.
-</p>
-
-<p class="getembe">
-Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 PM</strong>.
 </p>
 
 <div class="about-actions">
@@ -68,6 +84,7 @@ Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 
 </div>
 </section>
 
+
 <!-- EGEKABU SERIES -->
 <section id="egekabu" class="container section special fade-up">
 
@@ -78,52 +95,90 @@ Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 
 
   <div class="cards-grid mixes-grid">
 
-    <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/OM7424njx1k" allowfullscreen></iframe>
-      <h4>Egekabu 03</h4>
-    </div>
-
-    <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/gdSy63Xo-cA" allowfullscreen></iframe>
-      <h4>Egekabu 04</h4>
-    </div>
-
+    <!-- Egekabu 01 -->
     <div class="mix-card">
       <iframe src="https://www.youtube.com/embed/N7zFyAw-guA" allowfullscreen></iframe>
       <h4>Egekabu Edition 01</h4>
     </div>
 
+    <!-- Egekabu 02 -->
+    <div class="mix-card">
+      <a href="https://youtu.be/a_BXmyDywfA" target="_blank">
+        <img src="https://img.youtube.com/vi/a_BXmyDywfA/hqdefault.jpg" alt="Egekabu 02">
+      </a>
+      <h4>Egekabu 02</h4>
+    </div>
+
+    <!-- Egekabu 03 -->
+    <div class="mix-card">
+      <iframe src="https://www.youtube.com/embed/OM7424njx1k" allowfullscreen></iframe>
+      <h4>Egekabu 03</h4>
+    </div>
+
+    <!-- Egekabu 04 -->
+    <div class="mix-card">
+      <a href="https://youtu.be/tK9vTtChBuU" target="_blank">
+        <img src="https://img.youtube.com/vi/tK9vTtChBuU/hqdefault.jpg" alt="Egekabu 04">
+      </a>
+      <h4>Egekabu 04</h4>
+    </div>
+
   </div>
 
 </section>
 
-<!-- PHOTO GALLERY -->
+
+<!-- VIDEO MODAL -->
+<div id="video-modal" class="modal">
+
+<div class="modal-content">
+
+<span class="close">&times;</span>
+
+<iframe
+id="modal-video"
+src=""
+allow="autoplay; encrypted-media"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+
+<!-- GALLERY -->
 <section class="container section fade-up">
-  <h2 class="section-title">📸 DJ Rills Moments</h2>
 
-  <div class="cards-grid">
-    <!-- Always visible photos -->
-    <img src="./images/rills1.jpeg">
-    <img src="./images/rills2.jpeg">
-    <img src="./images/rills3.jpeg">
-    <img src="./images/rills4.jpeg">
-    <img src="./images/rills5.jpeg">
-  </div>
+<h2 class="section-title">📸 DJ Rills Moments</h2>
 
-  <!-- Hidden photos -->
-  <div class="cards-grid" id="hidden-gallery" style="display:none;">
-    <img src="./images/rills6.jpeg">
-    <img src="./images/rills7.jpeg">
-    <img src="./images/rills8.jpeg">
-    <img src="./images/rills9.jpeg">
-    <img src="./images/rills10.jpeg">
-    <img src="./images/rills11.jpeg">
-  </div>
+<div class="cards-grid">
 
-  <div style="text-align:center; margin-top:20px;">
-    <button id="view-more-btn" class="btn btn-gold">View More</button>
-  </div>
+<img src="./images/rills1.jpeg">
+<img src="./images/rills2.jpeg">
+<img src="./images/rills3.jpeg">
+<img src="./images/rills4.jpeg">
+<img src="./images/rills5.jpeg">
+
+</div>
+
+<div class="cards-grid" id="hidden-gallery" style="display:none;">
+
+<img src="./images/rills6.jpeg">
+<img src="./images/rills7.jpeg">
+<img src="./images/rills8.jpeg">
+<img src="./images/rills9.jpeg">
+<img src="./images/rills10.jpeg">
+<img src="./images/rills11.jpeg">
+
+</div>
+
+<div style="text-align:center;margin-top:20px;">
+<button id="view-more-btn" class="btn btn-gold">View More</button>
+</div>
+
 </section>
+
 
 <!-- MIXES -->
 <section id="mixes" class="container section fade-up">
@@ -133,17 +188,20 @@ Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 
 <div class="cards-grid mixes-grid">
 
 <div class="mix-card">
-<iframe src="https://www.youtube.com/embed/1O3p-Jx5CU4" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/1O3p-Jx5CU4"
+allowfullscreen></iframe>
 <h4>SDA Mix</h4>
 </div>
 
 <div class="mix-card">
-<iframe src="https://www.youtube.com/embed/a9GBR1Oa5iQ" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/a9GBR1Oa5iQ"
+allowfullscreen></iframe>
 <h4>Made In Bosongo</h4>
 </div>
 
 <div class="mix-card">
-<iframe src="https://www.youtube.com/embed/gdSy63Xo-cA" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/gdSy63Xo-cA"
+allowfullscreen></iframe>
 <h4>Turn Up Session</h4>
 </div>
 
@@ -151,31 +209,38 @@ Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 
 
 </section>
 
+
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="container section fade-up">
-  <h2 class="section-title">💬 What Fans Say</h2>
 
-  <div class="testimonial-slider">
-    <div class="testimonial active">
-      <p>"DJ Rills knows how to get the crowd moving every single time! 🔥"</p>
-      <h4>- Sarah K.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"His mixes are a perfect blend of Amapiano and Afro vibes. Absolute legend!"</p>
-      <h4>- James M.</h4>
-    </div>
-    <div class="testimonial">
-      <p>"I never miss a live session on Getembe TV. DJ Rills is amazing!"</p>
-      <h4>- Linda O.</h4>
-    </div>
+<h2 class="section-title">💬 What Fans Say</h2>
 
-    <!-- Slider buttons -->
-    <div class="testimonial-nav">
-      <button class="prev">&#10094;</button>
-      <button class="next">&#10095;</button>
-    </div>
-  </div>
+<div class="testimonial-slider">
+
+<div class="testimonial active">
+<p>"DJ Rills knows how to get the crowd moving every single time! 🔥"</p>
+<h4>- Sarah K.</h4>
+</div>
+
+<div class="testimonial">
+<p>"His mixes are a perfect blend of Amapiano and Afro vibes."</p>
+<h4>- James M.</h4>
+</div>
+
+<div class="testimonial">
+<p>"I never miss a live session on Getembe TV."</p>
+<h4>- Linda O.</h4>
+</div>
+
+<div class="testimonial-nav">
+<button class="prev">&#10094;</button>
+<button class="next">&#10095;</button>
+</div>
+
+</div>
+
 </section>
+
 
 <!-- EVENTS -->
 <section id="events" class="container section fade-up">
@@ -209,8 +274,11 @@ Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 
 </article>
 
 </div>
+
 </section>
 
+
+<!-- CONTACT -->
 <section id="contact" class="container section fade-up">
 
 <h2 class="section-title">Book Deejay Rills</h2>
@@ -218,17 +286,26 @@ Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 
 <div class="contact-wrap">
 
 <form class="contact-panel">
+
 <input type="text" placeholder="Your Name" required>
 <input type="email" placeholder="Your Email" required>
 <input type="tel" placeholder="Phone Number" required>
+
 <textarea rows="5" placeholder="Event details..." required></textarea>
 
 <div class="contact-actions">
+
 <button class="btn btn-gold">Send Message</button>
-<a class="btn btn-outline call" href="tel:+254712778860">
+
+<a class="btn btn-outline call"
+href="tel:+254712778860">
+
 <i class="fa-solid fa-phone"></i> Call Now
+
 </a>
+
 </div>
+
 </form>
 
 <aside class="contact-info">
@@ -238,12 +315,18 @@ Catch him live on <strong>Getembe TV</strong> every weekday <strong>1:00–4:00 
 </aside>
 
 </div>
+
 </section>
 
+
+<!-- FOOTER -->
 <footer class="site-footer">
+
 <p>© 2026 Deejay Rills. All rights reserved.</p>
 <p>Site by <strong>Ann</strong></p>
+
 </footer>
+
 
 <script src="script.js"></script>
 
