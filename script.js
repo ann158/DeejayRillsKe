@@ -1,4 +1,26 @@
 // =========================
+// HOODIE COLOUR SWITCHER
+// =========================
+function showHoodie(index) {
+  const slides = document.querySelectorAll(".hoodie-slide");
+  const dots = document.querySelectorAll(".hdot");
+  slides.forEach(function(s, i) {
+    s.classList.toggle("active", i === index);
+  });
+  dots.forEach(function(d, i) {
+    d.classList.toggle("active", i === index);
+  });
+  hoodieIndex = index;
+}
+
+// Auto-rotate hoodie colours every 2.5 seconds
+var hoodieIndex = 0;
+setInterval(function() {
+  hoodieIndex = (hoodieIndex + 1) % document.querySelectorAll(".hoodie-slide").length;
+  showHoodie(hoodieIndex);
+}, 2500);
+
+// =========================
 // HAMBURGER MENU
 // =========================
 const hamburger = document.getElementById("hamburger");

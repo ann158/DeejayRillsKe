@@ -528,7 +528,7 @@ body {
   overflow: hidden;
 }
 
-.merch-img-wrap img {
+.merch-img-wrap > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -537,7 +537,7 @@ body {
   transition: transform 0.4s ease;
 }
 
-.merch-card:hover .merch-img-wrap img {
+.merch-card:hover .merch-img-wrap > img {
   transform: scale(1.05);
 }
 
@@ -596,6 +596,73 @@ body {
 }
 
 .btn-wa:hover { background: #1ebe5d; transform: scale(1.04); }
+
+.merch-colors {
+  font-size: 0.78rem;
+  color: #888;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  flex-shrink: 0;
+}
+
+/* Hoodie colour slider */
+.hoodie-slider {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.hoodie-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0; left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.hoodie-slide.active {
+  opacity: 1;
+}
+
+.hoodie-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 7px;
+  z-index: 2;
+}
+
+.hdot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.6);
+  transition: transform 0.2s, border-color 0.2s;
+  display: block;
+}
+
+.hdot.active {
+  border-color: #fff;
+  transform: scale(1.2);
+}
+
+.hdot:hover { transform: scale(1.2); }
 
 .merch-note {
   text-align: center;
