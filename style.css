@@ -522,29 +522,23 @@ body {
   border-color: #b58e20;
 }
 
-/* IMAGE WRAP FIX */
 .merch-img-wrap {
   position: relative;
   aspect-ratio: 1;
   overflow: hidden;
 }
 
-/* BACKGROUNDS */
-.tee-bg { background: #0f0f0f; }
-.hoodie-bg { background: #0a0a0a; }
-
-/* IMAGE STYLE */
-.merch-img {
+.merch-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   display: block;
   transition: transform 0.4s ease;
 }
 
-/* HOVER ZOOM EFFECT */
-.merch-card:hover .merch-img {
-  transform: scale(1.08);
+.merch-card:hover .merch-img-wrap img {
+  transform: scale(1.05);
 }
 
 .merch-badge {
@@ -558,7 +552,6 @@ body {
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 20px;
-  z-index: 2;
 }
 
 .merch-info { padding: 18px 20px; text-align: left; }
@@ -602,10 +595,7 @@ body {
   transition: background 0.2s, transform 0.2s;
 }
 
-.btn-wa:hover { 
-  background: #1ebe5d; 
-  transform: scale(1.04); 
-}
+.btn-wa:hover { background: #1ebe5d; transform: scale(1.04); }
 
 .merch-note {
   text-align: center;
@@ -615,6 +605,7 @@ body {
 }
 
 .merch-note strong { color: #aaa; }
+
 /* =========================
    CONTACT
 ========================= */
