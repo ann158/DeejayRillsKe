@@ -4,8 +4,24 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <title>Deejay Rills | Mr. Mambo Mbaaya</title>
+
+<!-- SEO -->
+<meta name="description" content="DJ Rills (Mr. Mambo Mbaaya) – Kenya's finest DJ blending Kisii, Afro, Amapiano and club anthems. Book for events, stream mixes, shop Egekabu merch.">
+<meta name="keywords" content="DJ Rills, Deejay Rills, Mr Mambo Mbaaya, Egekabu, Kisii DJ, Kenya DJ, Amapiano, Afro">
+<meta name="author" content="Deejay Rills">
+
+<!-- Open Graph (WhatsApp / Facebook preview) -->
+<meta property="og:title" content="Deejay Rills | Mr. Mambo Mbaaya">
+<meta property="og:description" content="Feel the Beat. Live the Vibe. Book DJ Rills for your next event.">
+<meta property="og:image" content="./images/rilll.jpg">
+<meta property="og:type" content="website">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Deejay Rills | Mr. Mambo Mbaaya">
+<meta name="twitter:description" content="Feel the Beat. Live the Vibe.">
+<meta name="twitter:image" content="./images/rilll.jpg">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
@@ -14,16 +30,30 @@
 <body>
 
 <!-- TOPBAR -->
-<header class="topbar">
+<header class="topbar" id="topbar">
 
-<div class="brand">Deejay Rills</div>
+  <div class="brand">Deejay Rills</div>
 
-<div class="top-socials">
-<a href="https://www.instagram.com/_deejay_rills_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://www.tiktok.com/@deejayrills" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-<a href="https://www.facebook.com/Rills Ke" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-<a href="https://www.youtube.com/@Deejayrillske" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-</div>
+  <nav class="top-nav" id="top-nav">
+    <a href="#about">About</a>
+    <a href="#egekabu">Egekabu</a>
+    <a href="#mixes">Mixes</a>
+    <a href="#events">Events</a>
+    <a href="#merch" class="nav-merch">Merch</a>
+    <a href="#contact">Book</a>
+  </nav>
+
+  <div class="topbar-right">
+    <div class="top-socials">
+      <a href="https://www.instagram.com/_deejay_rills_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@deejayrills" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="https://www.facebook.com/RillsKe" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@Deejayrillske" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
 </header>
 
@@ -31,28 +61,24 @@
 <!-- HERO -->
 <section id="hero" class="fade-up">
 
-<div class="hero-bg"></div>
-<div class="hero-overlay"></div>
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
 
-<div class="hero-inner">
+  <div class="hero-inner">
+    <h1>
+      DJ Rills
+      <span class="tagline">Mr. Mambo Mbaaya</span>
+    </h1>
+    <p class="hero-sub">Feel the Beat. Live the Vibe.</p>
+    <div class="hero-cta">
+      <a href="#egekabu" class="btn btn-gold">Egekabu Series</a>
+      <a href="#mixes" class="btn btn-outline">Listen Now</a>
+    </div>
+  </div>
 
-<h1>
-DJ Rills
-<span class="tagline">Mr. Mambo Mbaaya</span>
-</h1>
-
-<p class="hero-sub">Feel the Beat. Live the Vibe.</p>
-
-<div class="hero-cta">
-<a href="#egekabu" class="btn btn-gold">Egekabu Series</a>
-<a href="#mixes" class="btn btn-outline">Listen Now</a>
-</div>
-
-</div>
-
-<a class="hero-scroll" href="#about">
-<i class="fa-solid fa-angles-down"></i>
-</a>
+  <a class="hero-scroll" href="#about" aria-label="Scroll down">
+    <i class="fa-solid fa-angles-down"></i>
+  </a>
 
 </section>
 
@@ -60,28 +86,25 @@ DJ Rills
 <!-- ABOUT -->
 <section id="about" class="container section fade-up">
 
-<div class="about-grid">
+  <div class="about-grid">
 
-<div class="about-photo">
-<img src="./images/rilll.jpg" alt="DJ Rills">
-</div>
+    <div class="about-photo">
+      <img src="./images/rilll.jpg" alt="DJ Rills performing live">
+    </div>
 
-<div class="about-text">
+    <div class="about-text">
+      <h2>About Deejay Rills</h2>
+      <p>
+        DJ Rills (Mr. Mambo Mbaaya) blends Kisii, Afro, Amapiano, and club anthems into unforgettable sets.
+        He's played at major festivals and private events across Kenya.
+      </p>
+      <div class="about-actions">
+        <a href="#mixes" class="btn btn-gold">Stream Mixes</a>
+        <a href="#contact" class="btn btn-outline">Book DJ Rills</a>
+      </div>
+    </div>
 
-<h2>About Deejay Rills</h2>
-
-<p>
-DJ Rills (Mr. Mambo Mbaaya) blends Kisii, Afro, Amapiano, and club anthems into unforgettable sets.
-He’s played at major festivals and private events across Kenya.
-</p>
-
-<div class="about-actions">
-<a href="#mixes" class="btn btn-gold">Stream Mixes</a>
-<a href="#contact" class="btn btn-outline">Book DJ Rills</a>
-</div>
-
-</div>
-</div>
+  </div>
 </section>
 
 
@@ -89,36 +112,34 @@ He’s played at major festivals and private events across Kenya.
 <section id="egekabu" class="container section special fade-up">
 
   <h2 class="section-title">🔥 Egekabu Series</h2>
-  <p style="text-align:center;margin-bottom:40px;">
-    All official Egekabu mixes by DJ Rills
-  </p>
+  <p style="text-align:center;margin-bottom:40px;">All official Egekabu mixes by DJ Rills</p>
 
   <div class="cards-grid mixes-grid">
 
-    <!-- Egekabu 01 -->
     <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/N7zFyAw-guA" allowfullscreen></iframe>
+      <div class="iframe-wrap">
+        <iframe src="https://www.youtube.com/embed/N7zFyAw-guA" allowfullscreen title="Egekabu Edition 01" loading="lazy"></iframe>
+      </div>
       <h4>Egekabu Edition 01</h4>
     </div>
 
-    <!-- Egekabu 02 -->
     <div class="mix-card">
-      <a href="https://youtu.be/a_BXmyDywfA" target="_blank">
-        <img src="https://img.youtube.com/vi/a_BXmyDywfA/hqdefault.jpg" alt="Egekabu 02">
+      <a href="https://youtu.be/a_BXmyDywfA" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/a_BXmyDywfA/hqdefault.jpg" alt="Egekabu Edition 02 – DJ Rills">
       </a>
       <h4>Egekabu 02</h4>
     </div>
 
-    <!-- Egekabu 03 -->
     <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/OM7424njx1k" allowfullscreen></iframe>
+      <div class="iframe-wrap">
+        <iframe src="https://www.youtube.com/embed/OM7424njx1k" allowfullscreen title="Egekabu Edition 03" loading="lazy"></iframe>
+      </div>
       <h4>Egekabu 03</h4>
     </div>
 
-    <!-- Egekabu 04 -->
     <div class="mix-card">
-      <a href="https://youtu.be/tK9vTtChBuU" target="_blank">
-        <img src="https://img.youtube.com/vi/tK9vTtChBuU/hqdefault.jpg" alt="Egekabu 04">
+      <a href="https://youtu.be/tK9vTtChBuU" target="_blank" rel="noopener">
+        <img src="https://img.youtube.com/vi/tK9vTtChBuU/hqdefault.jpg" alt="Egekabu Edition 04 – DJ Rills">
       </a>
       <h4>Egekabu 04</h4>
     </div>
@@ -129,85 +150,77 @@ He’s played at major festivals and private events across Kenya.
 
 
 <!-- VIDEO MODAL -->
-<div id="video-modal" class="modal">
-
-<div class="modal-content">
-
-<span class="close">&times;</span>
-
-<iframe
-id="modal-video"
-src=""
-allow="autoplay; encrypted-media"
-allowfullscreen>
-</iframe>
-
-</div>
-
+<div id="video-modal" class="modal" role="dialog" aria-modal="true">
+  <div class="modal-content">
+    <span class="close" aria-label="Close">&times;</span>
+    <iframe id="modal-video" src="" allow="autoplay; encrypted-media" allowfullscreen title="Video"></iframe>
+  </div>
 </div>
 
 
 <!-- GALLERY -->
 <section class="container section fade-up">
 
-<h2 class="section-title">📸 DJ Rills Moments</h2>
+  <h2 class="section-title">📸 DJ Rills Moments</h2>
 
-<div class="cards-grid">
+  <div class="cards-grid">
+    <img src="./images/rills1.jpeg" alt="DJ Rills at an event">
+    <img src="./images/rills2.jpeg" alt="DJ Rills on the decks">
+    <img src="./images/rills3.jpeg" alt="DJ Rills performing">
+    <img src="./images/rills4.jpeg" alt="DJ Rills live">
+    <img src="./images/rills5.jpeg" alt="DJ Rills crowd">
+  </div>
 
-<img src="./images/rills1.jpeg">
-<img src="./images/rills2.jpeg">
-<img src="./images/rills3.jpeg">
-<img src="./images/rills4.jpeg">
-<img src="./images/rills5.jpeg">
+  <div class="cards-grid" id="hidden-gallery" style="display:none;">
+    <img src="./images/rills6.jpeg" alt="DJ Rills backstage">
+    <img src="./images/rills7.jpeg" alt="DJ Rills festival">
+    <img src="./images/rills8.jpeg" alt="DJ Rills mixing">
+    <img src="./images/rills9.jpeg" alt="DJ Rills crowd shot">
+    <img src="./images/rills10.jpeg" alt="DJ Rills night event">
+    <img src="./images/rills11.jpeg" alt="DJ Rills stage">
+  </div>
 
-</div>
-
-<div class="cards-grid" id="hidden-gallery" style="display:none;">
-
-<img src="./images/rills6.jpeg">
-<img src="./images/rills7.jpeg">
-<img src="./images/rills8.jpeg">
-<img src="./images/rills9.jpeg">
-<img src="./images/rills10.jpeg">
-<img src="./images/rills11.jpeg">
-
-</div>
-
-<div style="text-align:center;margin-top:20px;">
-<button id="view-more-btn" class="btn btn-gold">View More</button>
-</div>
+  <div style="text-align:center;margin-top:20px;">
+    <button id="view-more-btn" class="btn btn-gold">View More</button>
+  </div>
 
 </section>
 
 
 <!-- MIXES -->
 <section id="mixes" class="container section fade-up">
+
   <h2 class="section-title">Latest Mixes</h2>
 
   <div class="cards-grid mixes-grid">
 
     <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/1O3p-Jx5CU4" allowfullscreen></iframe>
+      <div class="iframe-wrap">
+        <iframe src="https://www.youtube.com/embed/1O3p-Jx5CU4" allowfullscreen title="SDA Mix" loading="lazy"></iframe>
+      </div>
       <h4>SDA Mix</h4>
     </div>
 
     <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/a9GBR1Oa5iQ" allowfullscreen></iframe>
+      <div class="iframe-wrap">
+        <iframe src="https://www.youtube.com/embed/a9GBR1Oa5iQ" allowfullscreen title="Made In Bosongo" loading="lazy"></iframe>
+      </div>
       <h4>Made In Bosongo</h4>
     </div>
 
     <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/gdSy63Xo-cA" allowfullscreen></iframe>
+      <div class="iframe-wrap">
+        <iframe src="https://www.youtube.com/embed/gdSy63Xo-cA" allowfullscreen title="Turn Up Session" loading="lazy"></iframe>
+      </div>
       <h4>Turn Up Session</h4>
     </div>
 
-    <!-- New Embedded Mixes -->
     <div class="mix-card">
-      <iframe src="https://www.youtube.com/embed/q8YTSa_OLP8" allowfullscreen></iframe>
+      <div class="iframe-wrap">
+        <iframe src="https://www.youtube.com/embed/q8YTSa_OLP8" allowfullscreen title="Mix 01" loading="lazy"></iframe>
+      </div>
       <h4>Mix 01</h4>
     </div>
-
-   
 
   </div>
 </section>
@@ -216,31 +229,31 @@ allowfullscreen>
 <!-- TESTIMONIALS -->
 <section id="testimonials" class="container section fade-up">
 
-<h2 class="section-title">💬 What Fans Say</h2>
+  <h2 class="section-title">💬 What Fans Say</h2>
 
-<div class="testimonial-slider">
+  <div class="testimonial-slider">
 
-<div class="testimonial active">
-<p>"DJ Rills knows how to get the crowd moving every single time! 🔥"</p>
-<h4>- Sarah K.</h4>
-</div>
+    <div class="testimonial active">
+      <p>"DJ Rills knows how to get the crowd moving every single time! 🔥"</p>
+      <h4>- Sarah K.</h4>
+    </div>
 
-<div class="testimonial">
-<p>"His mixes are a perfect blend of Amapiano and Afro vibes."</p>
-<h4>- James M.</h4>
-</div>
+    <div class="testimonial">
+      <p>"His mixes are a perfect blend of Amapiano and Afro vibes."</p>
+      <h4>- James M.</h4>
+    </div>
 
-<div class="testimonial">
-<p>"I never miss a live session on Getembe TV."</p>
-<h4>- Linda O.</h4>
-</div>
+    <div class="testimonial">
+      <p>"I never miss a live session on Getembe TV."</p>
+      <h4>- Linda O.</h4>
+    </div>
 
-<div class="testimonial-nav">
-<button class="prev">&#10094;</button>
-<button class="next">&#10095;</button>
-</div>
+    <div class="testimonial-nav">
+      <button class="prev" aria-label="Previous">&#10094;</button>
+      <button class="next" aria-label="Next">&#10095;</button>
+    </div>
 
-</div>
+  </div>
 
 </section>
 
@@ -248,76 +261,144 @@ allowfullscreen>
 <!-- EVENTS -->
 <section id="events" class="container section fade-up">
 
-<h2 class="section-title">Events</h2>
+  <h2 class="section-title">Events</h2>
 
-<div class="cards-grid">
+  <div class="cards-grid">
 
-<article class="card">
-<img src="./images/mkisii-fest.jpg">
-<div class="card-body">
-<h3>M-Kisii Fest 2025</h3>
-<p class="small">🔥 The crowd went wild for the Rills vibe.</p>
-</div>
-</article>
+    <article class="card">
+      <img src="./images/mkisii-fest.jpg" alt="M-Kisii Fest 2025">
+      <div class="card-body">
+        <h3>M-Kisii Fest 2025</h3>
+        <p class="small">🔥 The crowd went wild for the Rills vibe.</p>
+      </div>
+    </article>
 
-<article class="card">
-<img src="./images/nightfest.jpg">
-<div class="card-body">
-<h3>Night Fest</h3>
-<p class="small">🌙 Beats, lights, and pure energy.</p>
-</div>
-</article>
+    <article class="card">
+      <img src="./images/nightfest.jpg" alt="Night Fest">
+      <div class="card-body">
+        <h3>Night Fest</h3>
+        <p class="small">🌙 Beats, lights, and pure energy.</p>
+      </div>
+    </article>
 
-<article class="card">
-<img src="./images/chillthrills.jpg">
-<div class="card-body">
-<h3>Chill & Thrills Party</h3>
-<p class="small">🌴 Good vibes, sunny beats.</p>
-</div>
-</article>
+    <article class="card">
+      <img src="./images/chillthrills.jpg" alt="Chill and Thrills Party">
+      <div class="card-body">
+        <h3>Chill &amp; Thrills Party</h3>
+        <p class="small">🌴 Good vibes, sunny beats.</p>
+      </div>
+    </article>
 
-</div>
+  </div>
 
+</section>
+
+
+<!-- MERCH -->
+<section id="merch" class="section merch-section fade-up">
+  <div class="container">
+
+    <h2 class="section-title merch-title">🛍️ Egekabu Merch</h2>
+    <p style="text-align:center;margin-bottom:40px;color:#ccc;">
+      Wear the vibe. Rep the Mambo Mbaaya movement.
+    </p>
+
+    <div class="merch-grid">
+
+      <!-- TEE -->
+      <div class="merch-card">
+        <div class="merch-img-wrap tee-bg">
+          <span class="merch-badge">Tee</span>
+          <img src="images/mech2.jpeg" alt="Egekabu Tee" class="merch-img">
+        </div>
+        <div class="merch-info">
+          <h3 class="merch-name">Egekabu Tee</h3>
+          <p class="merch-desc">Unisex · Sizes S – XL · Heavy cotton</p>
+          <div class="merch-row">
+            <span class="merch-price">KSh 1,500</span>
+            <a class="btn-wa"
+               href="https://wa.me/254712778860?text=Hey%20Rills!%20I%20want%20to%20order%20the%20Egekabu%20Tee%20(KSh%201%2C500).%20Please%20send%20me%20details%20🔥"
+               target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- HOODIE -->
+      <div class="merch-card">
+        <div class="merch-img-wrap hoodie-bg">
+          <span class="merch-badge">Hoodie</span>
+          <img src="images/mech1.jpeg" alt="Egekabu Hoodie" class="merch-img">
+        </div>
+        <div class="merch-info">
+          <h3 class="merch-name">Egekabu Hoodie</h3>
+          <p class="merch-desc">Unisex · Sizes S – XL · Fleece pullover</p>
+          <div class="merch-row">
+            <span class="merch-price">KSh 2,500</span>
+            <a class="btn-wa"
+               href="https://wa.me/254712778860?text=Hey%20Rills!%20I%20want%20to%20order%20the%20Egekabu%20Hoodie%20(KSh%202%2C500).%20Please%20send%20me%20details%20🔥"
+               target="_blank" rel="noopener">
+              <i class="fa-brands fa-whatsapp"></i> Order
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <p class="merch-note">
+      <i class="fa-brands fa-whatsapp" style="color:#25D366;margin-right:6px;"></i>
+      Orders via WhatsApp · <strong>+254 712 778860</strong> · Delivery arranged on order
+    </p>
+
+  </div>
 </section>
 
 
 <!-- CONTACT -->
 <section id="contact" class="container section fade-up">
 
-<h2 class="section-title">Book Deejay Rills</h2>
+  <h2 class="section-title">Book Deejay Rills</h2>
 
-<div class="contact-wrap">
+  <div class="contact-wrap">
 
-<form class="contact-panel">
+    <!-- Formspree: replace YOUR_FORM_ID below after signing up at formspree.io -->
+    <form class="contact-panel" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<input type="tel" placeholder="Phone Number" required>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="text" name="event" placeholder="Event Date &amp; Location" required>
+      <textarea rows="5" name="message" placeholder="Tell us about your event..." required></textarea>
 
-<textarea rows="5" placeholder="Event details..." required></textarea>
+      <div class="contact-actions">
+        <button type="submit" class="btn btn-gold">Send Message</button>
+        <a class="btn btn-outline call" href="tel:+254712778860">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+        <a class="btn btn-wa-book"
+           href="https://wa.me/254712778860?text=Hi%20DJ%20Rills!%20I'd%20like%20to%20book%20you%20for%20an%20event."
+           target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </div>
 
-<div class="contact-actions">
+    </form>
 
-<button class="btn btn-gold">Send Message</button>
+    <aside class="contact-info">
+      <h3>Contact</h3>
+      <p><strong>Phone:</strong> <a href="tel:+254712778860">+254 712 778860</a></p>
+      <p><strong>Email:</strong> <a href="mailto:deejayrillskenya@gmail.com">deejayrillskenya@gmail.com</a></p>
+      <div class="contact-socials">
+        <a href="https://www.instagram.com/_deejay_rills_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@deejayrills" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/RillsKe" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@Deejayrillske" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </aside>
 
-<a class="btn btn-outline call"
-href="tel:+254712778860">
-
-<i class="fa-solid fa-phone"></i> Call Now
-
-</a>
-
-</div>
-
-</form>
-
-<aside class="contact-info">
-<h3>Contact</h3>
-<p><strong>Phone:</strong> +254 712 778860</p>
-<p><strong>Email:</strong> deejayrillskenya@gmail.com</p>
-</aside>
-
-</div>
+  </div>
 
 </section>
 
@@ -325,10 +406,27 @@ href="tel:+254712778860">
 <!-- FOOTER -->
 <footer class="site-footer">
 
-<p>© 2026 Deejay Rills. All rights reserved.</p>
-<p>Site by <strong>Ann</strong></p>
+  <div class="footer-socials">
+    <a href="https://www.instagram.com/_deejay_rills_" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@deejayrills" target="_blank" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+    <a href="https://www.facebook.com/RillsKe" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.youtube.com/@Deejayrillske" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+  </div>
+
+  <p>© 2026 Deejay Rills. All rights reserved.</p>
+  <p>Site by <strong>Ann</strong></p>
 
 </footer>
+
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a class="wa-float"
+   href="https://wa.me/254712778860?text=Hi%20DJ%20Rills!"
+   target="_blank"
+   rel="noopener"
+   aria-label="Chat on WhatsApp">
+  <i class="fa-brands fa-whatsapp"></i>
+</a>
 
 
 <script src="script.js"></script>

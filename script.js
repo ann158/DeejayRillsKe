@@ -1,13 +1,32 @@
 // =========================
+// HAMBURGER MENU
+// =========================
+const hamburger = document.getElementById("hamburger");
+const topNav = document.getElementById("top-nav");
+
+hamburger.addEventListener("click", () => {
+  topNav.classList.toggle("open");
+  hamburger.classList.toggle("open");
+});
+
+// Close menu when a nav link is clicked
+topNav.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    topNav.classList.remove("open");
+    hamburger.classList.remove("open");
+  });
+});
+
+// =========================
 // EGEKABU THUMBNAILS (clickable)
 // =========================
 const thumbnails = document.querySelectorAll(".thumbnail-link");
 
 thumbnails.forEach(link => {
   link.addEventListener("click", e => {
-    e.preventDefault(); // prevent default if using modal before
+    e.preventDefault();
     const url = link.getAttribute("href");
-    window.open(url, "_blank"); // open in new tab
+    window.open(url, "_blank");
   });
 });
 
@@ -20,10 +39,10 @@ const hiddenGallery = document.getElementById("hidden-gallery");
 viewMoreBtn.addEventListener("click", () => {
   hiddenGallery.classList.toggle("visible");
   if (hiddenGallery.classList.contains("visible")) {
-    hiddenGallery.style.display = "grid"; // show the hidden gallery
+    hiddenGallery.style.display = "grid";
     viewMoreBtn.textContent = "View Less";
   } else {
-    hiddenGallery.style.display = "none"; // hide it again
+    hiddenGallery.style.display = "none";
     viewMoreBtn.textContent = "View More";
   }
 });
@@ -46,7 +65,7 @@ const fadeOnScroll = () => {
 };
 
 window.addEventListener("scroll", fadeOnScroll);
-fadeOnScroll(); // trigger on load
+fadeOnScroll();
 
 // =========================
 // TESTIMONIALS SLIDER
@@ -73,3 +92,27 @@ nextBtn.addEventListener("click", () => {
   testimonialIndex = (testimonialIndex + 1) % testimonials.length;
   showTestimonial(testimonialIndex);
 });
+
+// Auto-advance testimonials every 5 seconds
+setInterval(() => {
+  testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+  showTestimonial(testimonialIndex);
+}, 5000);
+
+// =========================
+// CONTACT FORM FEEDBACK
+// =========================
+const contactForm = document.querySelector(".contact-panel");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    const btn = contactForm.querySelector("button[type=submit]");
+    btn.textContent = "Sending...";
+    btn.disabled = true;
+    // Formspree handles submission — re-enable after 3s as fallback
+    setTimeout(() => {
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+    }, 3000);
+  });
+}
